@@ -3,43 +3,52 @@ body {
     margin: 0;
 }
 
-header {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 0px;
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-#homenav {
-    text-decoration: none;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+#pagehome a{
+    padding: 10px;
+    font-family: "Mr Dafoe", cursive;
     color:gold;
-    margin: 5px 5px 0px 0px;
+    font-size: 50px;
+    text-decoration: none;
     text-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
 
-#pagehome {
-    padding: 0px 10px;
-    font-family: "Lato", sans-serif;
-    font-size: 30px;
+header ul{
+    display: flex;
+}
+header li{
+    margin-left: 20px;
 }
 
-a{
+
+header a{
     text-decoration: none;
     color: gold;
+    padding: 12px;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
 }
 
-ul{
-    list-style: none;
-    width: 250px;
-    padding: 0;
-    display: flex;
-    justify-content:flex-end;
+ul a:hover{
+    color: black;
+    background-color: rgb(255, 251, 0); 
 }
 
-.head{
-    text-align: right;
-    width: 100px;
-    padding-right: 60px;
-}

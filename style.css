@@ -3,7 +3,6 @@
   background-image: url("/Info_Page_Website/images/places/Pagaruyung.jpg");
   background-position: center;
   background-size: cover;
-  flex-wrap: wrap;
 }
 
 #uppercontent {
@@ -12,7 +11,7 @@
     box-shadow: 2px 4px 8px rgb(68, 67, 67);
     border-radius: 8px;
     text-align: center;
-    padding: 50px 0px;
+    padding: 50px 0;
     margin: 0px auto;
     position: relative;
     top: 200px;
@@ -40,7 +39,7 @@
     padding: 12px 24px;
     color: black;
     font-size: 24px;
-    font-weight: 700;
+    font-weight: bold;
     border-radius: 8px;
     box-shadow: 2px 4px 8px rgb(68, 67, 67);
 
@@ -48,4 +47,8 @@
 
 #uppercontent a:hover{
     background-color: rgb(255, 230, 0);
+}
+
+.target img{
+    height: 200px;
 }
