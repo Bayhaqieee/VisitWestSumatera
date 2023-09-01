@@ -49,6 +49,46 @@
     background-color: rgb(255, 230, 0);
 }
 
+#lower {
+    padding: 24px;
+    background: linear-gradient(0deg, rgb(227,225,253),rgb(202,243,240));
+}
+
+#lower h2{
+    font-family: "Yellowtail",cursive;
+    text-align: center;
+    font-size: 50px;
+    color: rgba(255, 217, 0, 0.918);
+    margin: 12px 0 24px 0;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+#destinate {
+    display: flex;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+.target{
+    margin: 0 20px;
+}
+
+.target p {
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(124, 123, 123);
+    margin: 20px 0;
+}
 .target img{
     height: 200px;
+    width: 100%;
+    box-shadow: 2px 4px 8px rgb(68, 67, 67);
+    border-radius: 10px;
+    object-fit:cover;
+}
+
+.target strong{
+    color: gold;
 }
