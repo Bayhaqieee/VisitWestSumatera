@@ -1,3 +1,7 @@
+header {
+    position: absolute;
+}
+
 #upper {
   height: 800px;
   background-image: url("/Info_Page_Website/images/places/Pagaruyung.jpg");
