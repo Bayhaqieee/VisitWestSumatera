@@ -1,0 +1,48 @@
+main{
+    text-align: center;
+    border: 0 50px;
+    margin: 0 150px 50px 150px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px rgb(68, 67, 67);
+    padding: 10px 20px;
+}
+
+li{
+    list-style: none;
+}
+
+.desc{
+    margin: 0 30px;
+}
+
+main ul{
+    margin: 0 auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px 10px;
+    justify-content: center;
+}
+
+
+main ul li{
+    text-align:justify;
+    width: 300px;
+    font-size: large;
+}
+
+#profil{
+    width: 200px;
+    height: 200px;
+    border-radius: 1000px;
+    border: 5px solid cornsilk;
+    justify-content: center;
+    margin: 50px 50px;
+    object-fit: cover;
+}
+
+img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
