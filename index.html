@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="id"> <head>
     <meta charset="UTF-8" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Mr+Dafoe&family=Raleway:wght@700&family=Yellowtail&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
     <title>Visit West Sumatera</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="shared.css" />
@@ -19,73 +15,66 @@
         <a href="index.html">Minangkabau</a>
       </div>
       <nav>
-        <ul id="desta">
-          <li><a href="destination.html">Destinations</a></li>
-          <li><a href="about.html">About</a></li>
+        <ul>
+          <li><a href="destination.html" data-key="navDestinations">Destinations</a></li>
+          <li><a href="about.html" data-key="navAbout">About</a></li>
         </ul>
+        <div class="language-switcher">
+            <button id="lang-button">
+                <img id="current-lang-icon" src="images/icons/id-flag.png" alt="Language">
+                <span id="current-lang-text">ID</span>
+            </button>
+            <div id="lang-dropdown">
+                <button id="set-lang-id">Bahasa Indonesia</button>
+                <button id="set-lang-en">English</button>
+            </div>
+        </div>
         <button id="theme-toggle" aria-label="Toggle theme"></button>
       </nav>
     </header>
     <main>
       <section id="upper">
         <div id="uppercontent">
-          <h1>West Sumatera</h1>
-          <p>The Land of Enchantment</p>
-          <a href="destination.html">Discover Places</a>
+          <h1 data-key="homeTitle">Sumatera Barat</h1>
+          <p data-key="homeSubtitle">Negeri Penuh Pesona</p>
+          <a href="destination.html" data-key="homeButton">Temukan Tempat</a>
         </div>
       </section>
       <section id="lower">
-        <h2>Top Highlights</h2>
+        <h2 data-key="homeHighlightsTitle">Sorotan Utama</h2>
         <ul id="destinate">
           <li class="target">
-            <img
-              src="images/places/jamgadang.jpg"
-              alt="Jam Gadang on sunny day"
-            />
+            <img src="images/places/jamgadang.jpg" alt="Jam Gadang on sunny day"/>
             <div class="card-content">
-              <p>Jam Gadang <strong>Bukittinggi</strong></p>
+              <p data-key="jamGadangTitle">Jam Gadang</p>
+              <strong data-key="jamGadangLocation">Bukittinggi</strong>
             </div>
           </li>
           <li class="target">
-            <img
-              src="images/places/sianok.jpg"
-              alt="Sianok Canyon valley"
-            />
+            <img src="images/places/sianok.jpg" alt="Sianok Canyon valley"/>
             <div class="card-content">
-              <p>Sianok Canyon <strong>Bukittinggi</strong></p>
+              <p data-key="sianokTitle">Ngarai Sianok</p>
+              <strong data-key="sianokLocation">Bukittinggi</strong>
             </div>
           </li>
           <li class="target">
-            <img
-              src="images/places/harau.jpg"
-              alt="Harau Valley waterfalls"
-            />
+            <img src="images/places/harau.jpg" alt="Harau Valley waterfalls"/>
             <div class="card-content">
-              <p>Harau Valley <strong>Payakumbuh</strong></p>
+              <p data-key="harauTitle">Lembah Harau</p>
+              <strong data-key="harauLocation">Payakumbuh</strong>
             </div>
           </li>
         </ul>
       </section>
     </main>
     <footer>
-      <ul>
-        <li>
-          <a href="https://m.facebook.com/aditya.bayhaqie.90?eav=AfawZKW6ayNWzPAmH4ZTW5SU-fg_-sUcYN85y_rAAiYRn5HhS7Czm-zi2xDjgM1vD_w&paipv=0">
-            <img src="/Info_Page_Website/images/icons/facebook.png" alt="Facebook"/>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/bayhaqieee/">
-            <img src="/Info_Page_Website/images/icons/insta.png" alt="Instagram"/>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/bayhaqieee/">
-            <img src="/Info_Page_Website/images/icons/linked.png" alt="LinkedIn"/>
-          </a>
-        </li>
-      </ul>
+      <p data-key="footerText">© 2025 Desain Situs Web oleh Adit. Dibuat oleh Adit. Hak Cipta Dilindungi.</p>
     </footer>
+    <audio id="background-song" src="lagu-daerah.mp3" loop></audio>
+    <button id="song-toggle-button" aria-label="Toggle Music">
+      <img id="song-icon" src="images/icons/music-off.png" alt="Play Music">
+    </button>
+    <script src="translations.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

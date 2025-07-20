@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Mr+Dafoe&family=Raleway:wght@700&family=Yellowtail&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
     <title>Visit West Sumatera - Destinations</title>
     <link rel="stylesheet" href="places.css" />
     <link rel="stylesheet" href="shared.css" />
@@ -19,10 +16,20 @@
         <a href="index.html">Minangkabau</a>
       </div>
       <nav>
-        <ul id="desta">
-          <li><a href="destination.html">Destinations</a></li>
-          <li><a href="about.html">About</a></li>
+        <ul>
+          <li><a href="destination.html" class="active" data-key="navDestinations">Destinations</a></li>
+          <li><a href="about.html" data-key="navAbout">About</a></li>
         </ul>
+        <div class="language-switcher">
+            <button id="lang-button">
+                <img id="current-lang-icon" src="images/icons/id-flag.png" alt="Language">
+                <span id="current-lang-text">ID</span>
+            </button>
+            <div id="lang-dropdown">
+                <button id="set-lang-id">Bahasa Indonesia</button>
+                <button id="set-lang-en">English</button>
+            </div>
+        </div>
         <button id="theme-toggle" aria-label="Toggle theme"></button>
       </nav>
     </header>
@@ -32,11 +39,11 @@
           <img src="images/places/jamgadang.jpg" alt="Jam Gadang di Bukittinggi"/>
           <div class="item">
             <div>
-              <h2>Jam Gadang</h2>
-              <p>Landmark ikonik Bukittinggi, menara jam megah ini adalah simbol kota dan pusat kegiatan wisata. Arsitekturnya yang unik memadukan gaya Eropa dan Minangkabau.</p>
+              <h2 data-key="jamGadangTitle">Jam Gadang</h2>
+              <p data-key="jamGadangDesc"></p>
             </div>
             <div class="actions">
-              <a href="https://indonesiakaya.com/pustaka-indonesia/jam-gadang-monumen-kebanggaan-kota-bukittinggi/" target="_blank">Explore &rarr;</a>
+              <a href="..." target="_blank" data-key="exploreButton"></a>
             </div>
           </div>
         </li>
@@ -44,11 +51,11 @@
           <img src="images/places/Pagaruyung.jpg" alt="Istana Pagaruyung yang megah"/>
           <div class="item">
             <div>
-              <h2>Istana Pagaruyung</h2>
-              <p>Replika istana Kerajaan Minangkabau yang megah ini adalah pusat kebudayaan. Pengunjung bisa belajar sejarah dan berfoto dengan pakaian adat Minang.</p>
+              <h2 data-key="pagaruyungTitle"></h2>
+              <p data-key="pagaruyungDesc"></p>
             </div>
             <div class="actions">
-              <a href="https://indonesiakaya.com/pustaka-indonesia/istano-basa-pagaruyung-jejak-kejayaan-konfederasi-luhak-nan-tigo/" target="_blank">Explore &rarr;</a>
+              <a href="..." target="_blank" data-key="exploreButton"></a>
             </div>
           </div>
         </li>
@@ -56,11 +63,11 @@
           <img src="images/places/sianok.jpg" alt="Pemandangan Ngarai Sianok"/>
           <div class="item">
             <div>
-              <h2>Ngarai Sianok</h2>
-              <p>Lembah curam yang hijau dan subur di pinggiran Bukittinggi. Menawarkan panorama alam yang spektakuler, cocok untuk trekking ringan dan menikmati udara segar.</p>
+              <h2 data-key="sianokTitle"></h2>
+              <p data-key="sianokDesc"></p>
             </div>
             <div class="actions">
-              <a href="https://indonesiakaya.com/pustaka-indonesia/ngarai-sianok-lukisan-alam-dari-ranah-minang/" target="_blank">Explore &rarr;</a>
+              <a href="..." target="_blank" data-key="exploreButton"></a>
             </div>
           </div>
         </li>
@@ -68,11 +75,11 @@
           <img src="images/places/harau.jpg" alt="Lembah Harau dengan tebing granitnya"/>
           <div class="item">
             <div>
-              <h2>Lembah Harau</h2>
-              <p>Dikenal sebagai 'Yosemite'-nya Indonesia, lembah ini dikelilingi tebing-tebing granit terjal setinggi ratusan meter dan dihiasi beberapa air terjun yang indah.</p>
+              <h2 data-key="harauTitle"></h2>
+              <p data-key="harauDesc"></p>
             </div>
             <div class="actions">
-              <a href="https://minangtourism.com/lembah-harau/" target="_blank">Explore &rarr;</a>
+              <a href="..." target="_blank" data-key="exploreButton"></a>
             </div>
           </div>
         </li>
@@ -80,11 +87,11 @@
           <img src="images/places/maninjau.jpg" alt="Danau Maninjau dari ketinggian"/>
           <div class="item">
             <div>
-              <h2>Danau Maninjau</h2>
-              <p>Danau kaldera vulkanik yang tenang dan luas. Keindahannya dapat dinikmati dari Puncak Lawang atau dengan menyusuri Kelok 44 yang legendaris.</p>
+              <h2 data-key="maninjauTitle"></h2>
+              <p data-key="maninjauDesc"></p>
             </div>
             <div class="actions">
-              <a href="https://rri.co.id/index.php/wisata/786182/sejarah-danau-maninjau-keindahan-alam-dan-legenda-minangkabau" target="_blank">Explore &rarr;</a>
+              <a href="..." target="_blank" data-key="exploreButton"></a>
             </div>
           </div>
         </li>
@@ -92,11 +99,11 @@
           <img src="images/places/puncaklawang.jpg" alt="Paralayang di Puncak Lawang"/>
           <div class="item">
             <div>
-              <h2>Puncak Lawang</h2>
-              <p>Titik pandang terbaik untuk menyaksikan panorama Danau Maninjau. Tempat ini juga merupakan salah satu spot paralayang terbaik di Asia Tenggara.</p>
+              <h2 data-key="lawangTitle"></h2>
+              <p data-key="lawangDesc"></p>
             </div>
             <div class="actions">
-              <a href="https://minangtourism.com/puncak-lawang/" target="_blank">Explore &rarr;</a>
+              <a href="..." target="_blank" data-key="exploreButton"></a>
             </div>
           </div>
         </li>
@@ -104,11 +111,11 @@
           <img src="images/places/mentawai.jpg" alt="Peselancar di ombak Mentawai"/>
           <div class="item">
             <div>
-              <h2>Kepulauan Mentawai</h2>
-              <p>Surga bagi para peselancar dengan ombak kelas dunia. Selain itu, Mentawai menawarkan budaya suku asli yang unik dan keindahan bawah laut yang memesona.</p>
+              <h2 data-key="mentawaiTitle"></h2>
+              <p data-key="mentawaiDesc"></p>
             </div>
             <div class="actions">
-              <a href="https://www.djkn.kemenkeu.go.id/kpknl-padang/baca-artikel/12877/Yuk-Intip-Eksotisnya-Pesona-Pulau-Mentawai.html" target="_blank">Explore &rarr;</a>
+              <a href="..." target="_blank" data-key="exploreButton"></a>
             </div>
           </div>
         </li>
@@ -116,11 +123,11 @@
           <img src="images/places/anai.jpg" alt="Air Terjun Lembah Anai"/>
           <div class="item">
             <div>
-              <h2>Air Terjun Lembah Anai</h2>
-              <p>Air terjun ikonik yang terletak persis di tepi jalan raya Padang-Bukittinggi. Dikelilingi hutan hujan tropis yang lebat, menjadi tempat istirahat yang menyegarkan.</p>
+              <h2 data-key="anaiTitle"></h2>
+              <p data-key="anaiDesc"></p>
             </div>
             <div class="actions">
-              <a href="https://indonesiakaya.com/pustaka-indonesia/lembah-anai-anugerah-sang-maha-agung-di-jalur-padang-bukittinggi/" target="_blank">Explore &rarr;</a>
+              <a href="..." target="_blank" data-key="exploreButton"></a>
             </div>
           </div>
         </li>
@@ -128,11 +135,11 @@
           <img src="images/places/carocok.jpg" alt="Jembatan di Pantai Carocok"/>
           <div class="item">
             <div>
-              <h2>Pantai Carocok</h2>
-              <p>Terletak di Painan, pantai ini terkenal dengan pasir putihnya, air yang tenang, dan jembatan ikonik yang menghubungkan ke Pulau Cingkuak.</p>
+              <h2 data-key="carocokTitle"></h2>
+              <p data-key="carocokDesc"></p>
             </div>
             <div class="actions">
-              <a href="https://www.nativeindonesia.com/pantai-carocok-painan/" target="_blank">Explore &rarr;</a>
+              <a href="..." target="_blank" data-key="exploreButton"></a>
             </div>
           </div>
         </li>
@@ -140,11 +147,11 @@
           <img src="images/places/masjidraya.jpg" alt="Masjid Raya Sumatera Barat"/>
           <div class="item">
             <div>
-              <h2>Masjid Raya Sumbar</h2>
-              <p>Masjid megah tanpa kubah dengan atap khas arsitektur Minang. Desainnya yang unik dan modern menjadikannya salah satu masjid paling ikonik di Indonesia.</p>
+              <h2 data-key="masjidTitle"></h2>
+              <p data-key="masjidDesc"></p>
             </div>
             <div class="actions">
-              <a href="https://www.andalastourism.com/masjid-raya-sumatera-barat" target="_blank">Explore &rarr;</a>
+              <a href="..." target="_blank" data-key="exploreButton"></a>
             </div>
           </div>
         </li>
@@ -152,18 +159,24 @@
           <img src="images/places/malinkundang.jpg" alt="Batu Malin Kundang"/>
           <div class="item">
             <div>
-              <h2>Pantai Air Manis & Batu Malin Kundang</h2>
-              <p>Pantai yang terkenal dengan legenda Malin Kundang, anak durhaka yang dikutuk menjadi batu. Relief batu berbentuk orang bersujud menjadi daya tarik utamanya.</p>
+              <h2 data-key="malinTitle"></h2>
+              <p data-key="malinDesc"></p>
             </div>
             <div class="actions">
-              <a href="https://en.wikipedia.org/wiki/Malin_Kundang" target="_blank">Explore &rarr;</a>
+              <a href="..." target="_blank" data-key="exploreButton"></a>
             </div>
           </div>
         </li>
       </ul>
     </main>
     <footer>
-        </footer>
+      <p data-key="footerText"></p>
+    </footer>
+    <audio id="background-song" src="lagu-daerah.mp3" loop></audio>
+    <button id="song-toggle-button" aria-label="Toggle Music">
+      <img id="song-icon" src="images/icons/music-off.png" alt="Play Music">
+    </button>
+    <script src="translations.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

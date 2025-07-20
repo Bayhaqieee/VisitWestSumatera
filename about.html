@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700&family=Mr+Dafoe&family=Quicksand:wght@300;500;700&family=Raleway:wght@700&family=Yellowtail&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
     <title>Visit West Sumatera - About</title>
-    <link rel="stylesheet" href="shared.css" />
     <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="shared.css" />
     <link rel="icon" href="images/icons/icon48.ico" />
   </head>
   <body>
@@ -19,10 +16,20 @@
         <a href="index.html">Minangkabau</a>
       </div>
       <nav>
-        <ul id="desta">
-          <li><a href="destination.html">Destinations</a></li>
-          <li><a href="about.html">About</a></li>
+        <ul>
+          <li><a href="destination.html" data-key="navDestinations"></a></li>
+          <li><a href="about.html" class="active" data-key="navAbout"></a></li>
         </ul>
+        <div class="language-switcher">
+            <button id="lang-button">
+                <img id="current-lang-icon" src="images/icons/id-flag.png" alt="Language">
+                <span id="current-lang-text">ID</span>
+            </button>
+            <div id="lang-dropdown">
+                <button id="set-lang-id">Bahasa Indonesia</button>
+                <button id="set-lang-en">English</button>
+            </div>
+        </div>
         <button id="theme-toggle" aria-label="Toggle theme"></button>
       </nav>
     </header>
@@ -30,36 +37,31 @@
       <ul>
         <li>
             <div class="profile-card">
-              <h4>About me</h4>
-                <p>
-                  A Versatile, Analytical, Optimistic and Genius Freshmen in Sriwijaya
-                  University, who is a huge fan in Tech industry and strive to get a
-                  top notch proffessionality. Aditya is fond on Efficiency and High
-                  Achieving Results. Passionate on Software, Network Development and Web Development. Aditya is having excellency in Idea Creation, Flexibility and Critical Thinking which helps him to grow.
-                </p>
+              <h4 data-key="aboutMeTitle"></h4>
+              <p data-key="aboutMeDesc"></p>
             </div>
         </li>
         <li id="profile-pic-container">
             <img id="profil" src="/Info_Page_Website/images/profile/about.png" alt="Picture of Aditya Bayhaqie" />
             <div id="social-links">
-               <a href="https://m.facebook.com/aditya.bayhaqie.90?eav=AfawZKW6ayNWzPAmH4ZTW5SU-fg_-sUcYN85y_rAAiYRn5HhS7Czm-zi2xDjgM1vD_w&paipv=0" target="_blank"><img src="/Info_Page_Website/images/icons/facebookb.png" alt="Facebook"></a>
-               <a href="https://www.instagram.com/bayhaqieee/" target="_blank"><img src="/Info_Page_Website/images/icons/instagramb.png" alt="Instagram"></a>
-               <a href="https://www.linkedin.com/in/bayhaqieee/" target="_blank"><img src="/Info_Page_Website/images/icons/linkedinb.png" alt="Linkedin"></a>
+               <a href="..." target="_blank"><img src="/Info_Page_Website/images/icons/facebookb.png" alt="Facebook"></a>
+               <a href="..." target="_blank"><img src="/Info_Page_Website/images/icons/instagramb.png" alt="Instagram"></a>
+               <a href="..." target="_blank"><img src="/Info_Page_Website/images/icons/linkedinb.png" alt="Linkedin"></a>
             </div>
         </li>
         <li>
             <div class="profile-card details">
-              <h4>Details</h4>
+              <h4 data-key="detailsTitle"></h4>
                 <p>
-                  <strong>Name:</strong>
+                  <strong data-key="nameLabel"></strong>
                   Muhammad Aditya Bayhaqie
                 </p>
                 <p>
-                  <strong>Age:</strong>
-                  19 Years Old
+                  <strong data-key="ageLabel"></strong>
+                  <span data-key="ageValue"></span>
                 </p>
                 <p>
-                  <strong>Location:</strong>
+                  <strong data-key="locationLabel"></strong>
                   Lt.5 No. 505 Rusunawa Lama Unsri, Unsri, Indralaya Indah, Indralaya, Ogan Ilir Regency, South Sumatra 30862
                 </p>
             </div>
@@ -67,7 +69,13 @@
       </ul>
     </main>
     <footer>
-        </footer>
+      <p data-key="footerText"></p>
+    </footer>
+    <audio id="background-song" src="lagu-daerah.mp3" loop></audio>
+    <button id="song-toggle-button" aria-label="Toggle Music">
+      <img id="song-icon" src="images/icons/music-off.png" alt="Play Music">
+    </button>
+    <script src="translations.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
