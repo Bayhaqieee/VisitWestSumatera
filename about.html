@@ -5,12 +5,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&family=Mr+Dafoe&family=Quicksand:wght@300;500;700&family=Raleway:wght@700&family=Yellowtail&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700&family=Mr+Dafoe&family=Quicksand:wght@300;500;700&family=Raleway:wght@700&family=Yellowtail&display=swap"
       rel="stylesheet"
     />
-    <title>Visit West Sumatera</title>
+    <title>Visit West Sumatera - About</title>
     <link rel="stylesheet" href="shared.css" />
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="about.css" />
     <link rel="icon" href="images/icons/icon48.ico" />
   </head>
   <body>
@@ -23,38 +23,51 @@
           <li><a href="destination.html">Destinations</a></li>
           <li><a href="about.html">About</a></li>
         </ul>
+        <button id="theme-toggle" aria-label="Toggle theme"></button>
       </nav>
     </header>
     <main>
-      <h2>Profile</h2>
-      <h3>I'm a Developing Web Developer</h3>
       <ul>
-        <li class="desc">
-          <h4>About me</h4>
-            <p>
-              A Versatile, Analytical, Optimistic and Genius Freshmen in Sriwijaya
-              University, who is a huge fan in Tech industry and strive to get a
-              top notch proffessionality. Aditya is fond on Efficiency and High
-              Achieving Results. Passionate on Software, Network Development and Web Development. Aditya is having excellency in Idea Creation, Flexibility and Critical Thinking which helps him to grow.
-            </p>
-            <p id="profile"><a href="https://m.facebook.com/aditya.bayhaqie.90?eav=AfawZKW6ayNWzPAmH4ZTW5SU-fg_-sUcYN85y_rAAiYRn5HhS7Czm-zi2xDjgM1vD_w&paipv=0"><img src="/Info_Page_Website/images/icons/facebookb.png" alt="Facebook"></a>
-               <a href="https://www.instagram.com/bayhaqieee/"><img src="/Info_Page_Website/images/icons/instagramb.png" alt="Instagram"></a>
-               <a href="https://www.linkedin.com/in/bayhaqieee/"><img src="/Info_Page_Website/images/icons/linkedinb.png" alt="Linkedin"></a></p>
+        <li>
+            <div class="profile-card">
+              <h4>About me</h4>
+                <p>
+                  A Versatile, Analytical, Optimistic and Genius Freshmen in Sriwijaya
+                  University, who is a huge fan in Tech industry and strive to get a
+                  top notch proffessionality. Aditya is fond on Efficiency and High
+                  Achieving Results. Passionate on Software, Network Development and Web Development. Aditya is having excellency in Idea Creation, Flexibility and Critical Thinking which helps him to grow.
+                </p>
+            </div>
         </li>
-        <li><img id="profil" src="/Info_Page_Website/images/profile/about.png" alt="Picture of Aditya Bayhaqie" /></li>
-        <li class="desc">
-          <h4>Details</h4>
-            <p><strong>Name:</strong>
-              <p>Muhammad Aditya Bayhaqie</p>
-            </p>
-            <p><strong>Age:</strong>
-              <p>19 Years Old</p>
-            </p>
-            <p><strong>Location:</strong>
-              <p>Lt.5 No. 505 Rusunawa Lama Unsri, Unsri, Indralaya Indah, Indralaya, Ogan Ilir Regency, South Sumatra 30862</p>
-            </p>
-          </p>
+        <li id="profile-pic-container">
+            <img id="profil" src="/Info_Page_Website/images/profile/about.png" alt="Picture of Aditya Bayhaqie" />
+            <div id="social-links">
+               <a href="https://m.facebook.com/aditya.bayhaqie.90?eav=AfawZKW6ayNWzPAmH4ZTW5SU-fg_-sUcYN85y_rAAiYRn5HhS7Czm-zi2xDjgM1vD_w&paipv=0" target="_blank"><img src="/Info_Page_Website/images/icons/facebookb.png" alt="Facebook"></a>
+               <a href="https://www.instagram.com/bayhaqieee/" target="_blank"><img src="/Info_Page_Website/images/icons/instagramb.png" alt="Instagram"></a>
+               <a href="https://www.linkedin.com/in/bayhaqieee/" target="_blank"><img src="/Info_Page_Website/images/icons/linkedinb.png" alt="Linkedin"></a>
+            </div>
+        </li>
+        <li>
+            <div class="profile-card details">
+              <h4>Details</h4>
+                <p>
+                  <strong>Name:</strong>
+                  Muhammad Aditya Bayhaqie
+                </p>
+                <p>
+                  <strong>Age:</strong>
+                  19 Years Old
+                </p>
+                <p>
+                  <strong>Location:</strong>
+                  Lt.5 No. 505 Rusunawa Lama Unsri, Unsri, Indralaya Indah, Indralaya, Ogan Ilir Regency, South Sumatra 30862
+                </p>
+            </div>
+        </li>
       </ul>
     </main>
+    <footer>
+        </footer>
+    <script src="app.js"></script>
   </body>
 </html>

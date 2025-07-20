@@ -1,62 +1,82 @@
-body {
-    background: linear-gradient(70deg, rgb(24,24,24),rgb(25,29,29));
-    color: rgb(68, 68, 68);
+main {
+    padding: 48px 20px;
+    box-sizing: border-box;
 }
 
-
-header {
-    position: static;
-}
-
-main ul{
-    width: 1500px;
-    margin: 0 auto 48px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px 25px;
+main ul {
+  max-width: 1400px;
+  margin: 0 auto 48px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 30px;
 }
 
 main li {
-    display: flex;
-    background-color: white;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card-bg-light);
+  box-shadow: 0 4px 12px var(--shadow-light);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode main li {
+    background-color: var(--card-bg-dark);
+    box-shadow: 0 4px 12px var(--shadow-dark);
+}
+
+main li:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px var(--shadow-light);
+}
+
+body.dark-mode main li:hover {
+    box-shadow: 0 8px 20px var(--shadow-dark);
 }
 
 main li img {
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.item {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.item h2 {
+  margin: 0 0 16px 0;
+}
+
+.item p {
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
 .actions {
-    text-align: end;
+  text-align: end;
+  margin-top: auto;
 }
 
-.actions a{
-    text-decoration: none;
-    color:aqua;
-    font-weight: 600;
-    border-radius: 5px;
-    font-size: 20px;
+.actions a {
+  text-decoration: none;
+  color: var(--action-color);
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.2s;
 }
 
-.actions a:hover{
-    background-color: rgb(235, 253, 255);
+body.dark-mode .actions a {
+    color: var(--action-color-dark);
 }
 
-.item{
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.item h2{
-    margin: 0;
-}
-
-.wide{
-    grid-column: 1 / span 2;
+.actions a:hover {
+  background-color: rgba(0, 123, 255, 0.1);
 }

@@ -5,7 +5,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&family=Mr+Dafoe&family=Quicksand:wght@300;500;700&family=Raleway:wght@700&family=Yellowtail&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Mr+Dafoe&family=Raleway:wght@700&family=Yellowtail&display=swap"
       rel="stylesheet"
     />
     <title>Visit West Sumatera</title>
@@ -23,39 +23,46 @@
           <li><a href="destination.html">Destinations</a></li>
           <li><a href="about.html">About</a></li>
         </ul>
+        <button id="theme-toggle" aria-label="Toggle theme"></button>
       </nav>
     </header>
     <main>
       <section id="upper">
         <div id="uppercontent">
           <h1>West Sumatera</h1>
-          <p>Explore West Sumatra Today</p>
+          <p>The Land of Enchantment</p>
           <a href="destination.html">Discover Places</a>
         </div>
       </section>
       <section id="lower">
-        <h2>Highlights</h2>
+        <h2>Top Highlights</h2>
         <ul id="destinate">
           <li class="target">
             <img
               src="images/places/jamgadang.jpg"
               alt="Jam Gadang on sunny day"
             />
-            <p>Jam Gadang <strong>Bukittinggi</strong></p>
+            <div class="card-content">
+              <p>Jam Gadang <strong>Bukittinggi</strong></p>
+            </div>
           </li>
           <li class="target">
             <img
-              src="images/places/sajuta.jpeg"
-              alt="Sajuta Janjang dipagi hari"
+              src="images/places/sianok.jpg"
+              alt="Sianok Canyon valley"
             />
-            <p>Sajuta Janjang <strong>Agam</strong></p>
+            <div class="card-content">
+              <p>Sianok Canyon <strong>Bukittinggi</strong></p>
+            </div>
           </li>
           <li class="target">
             <img
-              src="images/places/marapi.jpg"
-              alt="Gunung Marapi disaat fajar"
+              src="images/places/harau.jpg"
+              alt="Harau Valley waterfalls"
             />
-            <p>Gunung Marapi <strong>Agam</strong></p>
+            <div class="card-content">
+              <p>Harau Valley <strong>Payakumbuh</strong></p>
+            </div>
           </li>
         </ul>
       </section>
@@ -63,28 +70,22 @@
     <footer>
       <ul>
         <li>
-          <a
-            href="https://m.facebook.com/aditya.bayhaqie.90?eav=AfawZKW6ayNWzPAmH4ZTW5SU-fg_-sUcYN85y_rAAiYRn5HhS7Czm-zi2xDjgM1vD_w&paipv=0"
-            ><img
-              src="/Info_Page_Website/images/icons/facebook.png"
-              alt="Facebook"
-          /></a>
+          <a href="https://m.facebook.com/aditya.bayhaqie.90?eav=AfawZKW6ayNWzPAmH4ZTW5SU-fg_-sUcYN85y_rAAiYRn5HhS7Czm-zi2xDjgM1vD_w&paipv=0">
+            <img src="/Info_Page_Website/images/icons/facebook.png" alt="Facebook"/>
+          </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/bayhaqieee/"
-            ><img
-              src="/Info_Page_Website/images/icons/insta.png"
-              alt="Instagram"
-          /></a>
+          <a href="https://www.instagram.com/bayhaqieee/">
+            <img src="/Info_Page_Website/images/icons/insta.png" alt="Instagram"/>
+          </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/bayhaqieee/"
-            ><img
-              src="/Info_Page_Website/images/icons/linked.png"
-              alt="LinkedIn"
-          /></a>
+          <a href="https://www.linkedin.com/in/bayhaqieee/">
+            <img src="/Info_Page_Website/images/icons/linked.png" alt="LinkedIn"/>
+          </a>
         </li>
       </ul>
     </footer>
+    <script src="app.js"></script>
   </body>
 </html>

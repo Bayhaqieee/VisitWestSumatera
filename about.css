@@ -1,48 +1,105 @@
-main{
+main {
+  max-width: 1200px;
+  margin: 48px auto;
+  padding: 40px;
+}
+
+main ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 50px;
+}
+
+@media (min-width: 992px) {
+    main ul {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+}
+
+.profile-card {
+    background-color: var(--card-bg-light);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px var(--shadow-light);
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body.dark-mode .profile-card {
+    background-color: var(--card-bg-dark);
+    box-shadow: 0 4px 20px var(--shadow-dark);
+}
+
+
+.profile-card h4 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin: 0 0 20px 0;
+}
+
+.profile-card p {
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+.profile-card strong {
+    color: var(--text-light);
+}
+
+body.dark-mode .profile-card strong {
+    color: var(--text-dark);
+}
+
+.details p {
+    margin-bottom: 1.5rem;
+}
+
+.details p strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+#profile-pic-container {
     text-align: center;
-    border: 0 50px;
-    margin: 0 150px 50px 150px;
-    border-radius: 10px;
-    box-shadow: 2px 4px 8px rgb(68, 67, 67);
-    padding: 10px 20px;
 }
 
-li{
-    list-style: none;
+#profil {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 10px solid var(--card-bg-light);
+  box-shadow: 0 0 25px rgba(0,0,0,0.15);
+  object-fit: cover;
+  margin-bottom: 20px;
 }
 
-.desc{
-    margin: 0 30px;
+body.dark-mode #profil {
+    border-color: var(--card-bg-dark);
 }
 
-main ul{
-    margin: 0 auto 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px 10px;
-    justify-content: center;
+#social-links {
+  text-align: center;
 }
 
-
-main ul li{
-    text-align:justify;
-    width: 300px;
-    font-size: large;
+#social-links a {
+    margin: 0 15px;
+    display: inline-block;
+    transition: transform 0.2s ease;
 }
 
-#profil{
-    width: 200px;
-    height: 200px;
-    border-radius: 1000px;
-    border: 10px solid cornsilk;
-    justify-content: center;
-    margin: 60px 40px;
-    object-fit: cover;
+#social-links a:hover {
+    transform: scale(1.2);
 }
 
-img{
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
+#social-links img {
+  width: 40px;
+  height: 40px;
 }
-
