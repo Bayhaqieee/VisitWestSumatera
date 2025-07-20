@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>West Sumatera - Culinary</title>
+    <link rel="stylesheet" href="culinary.css" />
+    <link rel="stylesheet" href="shared.css" />
+    <link rel="icon" href="images/icons/icon48.ico" />
+</head>
+<body>
+    <header>
+        <div id="pagehome"><a href="index.html">Minangkabau</a></div>
+        <nav>
+            <ul>
+                <li><a href="destination.html" data-key="navDestinations">Destinations</a></li>
+                <li><a href="culinary.html" class="active" data-key="navCulinary">Culinary</a></li>
+                <li><a href="about.html" data-key="navAbout">About</a></li>
+            </ul>
+            <div class="language-switcher">
+                <button id="lang-button" aria-label="Change Language"><i id="current-lang-icon" class="fas fa-globe"></i></button>
+                <div id="lang-dropdown">
+                    <button id="set-lang-id">Bahasa Indonesia</button>
+                    <button id="set-lang-en">English</button>
+                </div>
+            </div>
+            <button id="theme-toggle" aria-label="Toggle Theme"><i id="theme-icon" class="fas fa-moon"></i></button>
+        </nav>
+    </header>
+    <main>
+        <div class="culinary-grid">
+            <div class="culinary-card"><img src="images/culinary/rendang.jpg" alt="Rendang"><div class="item"><h2 data-key="rendangTitle"></h2><p data-key="rendangDesc"></p></div></div>
+            <div class="culinary-card"><img src="images/culinary/sate-padang.jpg" alt="Sate Padang"><div class="item"><h2 data-key="satePadangTitle"></h2><p data-key="satePadangDesc"></p></div></div>
+            <div class="culinary-card"><img src="images/culinary/soto-padang.jpg" alt="Soto Padang"><div class="item"><h2 data-key="sotoPadangTitle"></h2><p data-key="sotoPadangDesc"></p></div></div>
+            <div class="culinary-card"><img src="images/culinary/dendeng-balado.jpg" alt="Dendeng Balado"><div class="item"><h2 data-key="dendengBaladoTitle"></h2><p data-key="dendengBaladoDesc"></p></div></div>
+            <div class="culinary-card"><img src="images/culinary/gulai-itiak.jpg" alt="Gulai Itiak"><div class="item"><h2 data-key="gulaiItiakTitle"></h2><p data-key="gulaiItiakDesc"></p></div></div>
+            <div class="culinary-card"><img src="images/culinary/ayam-pop.jpg" alt="Ayam Pop"><div class="item"><h2 data-key="ayamPopTitle"></h2><p data-key="ayamPopDesc"></p></div></div>
+            <div class="culinary-card"><img src="images/culinary/ikan-bakar.jpg" alt="Ikan Bakar"><div class="item"><h2 data-key="ikanBakarTitle"></h2><p data-key="ikanBakarDesc"></p></div></div>
+            <div class="culinary-card"><img src="images/culinary/lontong-gulai.jpg" alt="Lontong Gulai"><div class="item"><h2 data-key="lontongGulaiTitle"></h2><p data-key="lontongGulaiDesc"></p></div></div>
+            <div class="culinary-card"><img src="images/culinary/lamang-tapai.jpg" alt="Lamang Tapai"><div class="item"><h2 data-key="lamangTapaiTitle"></h2><p data-key="lamangTapaiDesc"></p></div></div>
+            <div class="culinary-card"><img src="images/culinary/teh-talua.jpg" alt="Teh Talua"><div class="item"><h2 data-key="tehTaluaTitle"></h2><p data-key="tehTaluaDesc"></p></div></div>
+        </div>
+    </main>
+    <footer><p data-key="footerText"></p></footer>
+    <div id="song-player-widget">
+        <button id="song-toggle-button" aria-label="Toggle Music"><i id="song-icon" class="fas fa-play"></i></button>
+        <div id="song-name-display"></div>
+    </div>
+    <audio id="background-song" src="lagu-daerah.mp3" loop data-song-name="Ayam Den Lapeh"></audio>
+    <script src="translations.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

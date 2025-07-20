@@ -126,3 +126,41 @@ body.dark-mode .target p {
 body.dark-mode .target strong {
     color: var(--text-dark);
 }
+
+/* NEW INFORMATIVE SECTION STYLES */
+.info-section {
+  padding: 80px 20px;
+  background-color: var(--card-bg-light);
+}
+
+body.dark-mode .info-section {
+  background-color: var(--card-bg-dark);
+}
+
+.info-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.info-card {
+  padding: 20px;
+}
+
+.info-card h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--primary-red);
+  margin: 0 0 15px 0;
+}
+
+.info-card p {
+  line-height: 1.7;
+  color: #6c757d;
+}
+
+body.dark-mode .info-card p {
+  color: #adb5bd;
+}

@@ -1,5 +1,5 @@
 :root {
-  /* New Color Palette: Red, Orange, Black */
+  /* Color Palette */
   --primary-red: #D92027;
   --secondary-orange: #FF9234;
   --dark-bg: #121212;
@@ -10,10 +10,12 @@
   --card-bg-dark: #1e1e1e;
   --shadow-light: rgba(0, 0, 0, 0.08);
   --shadow-dark: rgba(0, 0, 0, 0.5);
+  --header-bg-light: rgba(255, 255, 255, 0.85);
+  --header-bg-dark: rgba(18, 18, 18, 0.85);
 }
 
 body {
-  font-family: 'Inter', sans-serif; /* New Body Font */
+  font-family: 'Inter', sans-serif;
   margin: 0;
   background-color: var(--bg-light);
   color: var(--text-light);
@@ -21,7 +23,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, #pagehome a {
-  font-family: 'Poppins', sans-serif; /* New Heading Font */
+  font-family: 'Poppins', sans-serif;
 }
 
 body.dark-mode {
@@ -29,29 +31,46 @@ body.dark-mode {
   color: var(--text-dark);
 }
 
+/* --- HEADER STICKY & SCROLLED STATE --- */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 60px;
+  padding: 15px 40px;
   width: 100%;
   box-sizing: border-box;
-  position: absolute;
+  position: sticky; /* Sticky by default for all pages */
   top: 0;
   left: 0;
   z-index: 1000;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--header-bg-light);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 5px var(--shadow-light);
 }
 
-body:not(:has(#upper)) header, .header-scrolled {
+body.dark-mode header {
+    background-color: var(--header-bg-dark);
+}
+
+/* Special styling for homepage header before scroll */
+body.homepage header {
+    position: absolute;
+    background-color: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+}
+
+/* Style for homepage header AFTER scrolling */
+body.homepage header.header-scrolled {
     position: sticky;
-    background-color: var(--bg-light);
-    backdrop-filter: blur(10px);
+    background-color: var(--header-bg-light);
     box-shadow: 0 2px 5px var(--shadow-light);
+    backdrop-filter: blur(10px);
 }
 
-body.dark-mode:not(:has(#upper)) header, body.dark-mode .header-scrolled {
-    background-color: rgba(18, 18, 18, 0.85); /* Dark Header BG */
+body.homepage.dark-mode header.header-scrolled {
+    background-color: var(--header-bg-dark);
 }
 
 #pagehome a {
@@ -59,12 +78,17 @@ body.dark-mode:not(:has(#upper)) header, body.dark-mode .header-scrolled {
   font-size: 40px;
   text-decoration: none;
   font-weight: 700;
-  text-shadow: none;
+}
+/* On homepage before scroll, make logo white for visibility */
+body.homepage header:not(.header-scrolled) #pagehome a {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
 header nav {
     display: flex;
     align-items: center;
+    gap: 15px;
 }
 
 header ul {
@@ -72,20 +96,23 @@ header ul {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-header li {
-  margin-left: 20px;
+  gap: 5px;
 }
 
 header li a {
   text-decoration: none;
   color: var(--text-light);
-  padding: 8px 16px;
+  padding: 10px 18px;
   font-size: 18px;
   font-weight: 500;
   border-radius: 50px;
   transition: color 0.3s, background-color 0.3s;
+}
+
+/* On homepage before scroll, make nav links white for visibility */
+body.homepage header:not(.header-scrolled) li a {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 body.dark-mode header li a {
@@ -96,87 +123,49 @@ header li a:hover, header li a.active {
   color: white;
   background-color: var(--primary-red);
 }
+body.homepage header:not(.header-scrolled) li a:hover {
+    color: black;
+    background-color: var(--secondary-orange);
+}
 
-#theme-toggle {
+/* --- LARGER BUTTONS --- */
+#theme-toggle, .language-switcher button {
     background: transparent;
     border: none;
     cursor: pointer;
-    margin-left: 20px;
-    padding: 5px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--text-light);
+    transition: background-color 0.2s;
 }
 
-#theme-toggle img {
-    width: 28px;
-    height: 28px;
+/* On homepage before scroll, make icons white for visibility */
+body.homepage header:not(.header-scrolled) #theme-toggle,
+body.homepage header:not(.header-scrolled) .language-switcher button {
+    color: white;
 }
 
-/* NEW FOOTER STYLING */
-footer {
-  background-color: #000000;
-  color: #888;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-}
-
-/* NEW SONG BUTTON STYLING */
-#song-toggle-button {
-  position: fixed;
-  bottom: 25px;
-  left: 25px;
-  width: 50px;
-  height: 50px;
-  background-color: var(--primary-red);
-  border: none;
-  border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1001;
-  transition: transform 0.2s ease;
-}
-
-#song-toggle-button:hover {
-  transform: scale(1.1);
-}
-
-#song-icon {
-  width: 24px;
-  height: 24px;
-}
-
-.language-switcher {
-  position: relative;
-  margin-left: 20px;
-}
-
-#lang-button {
-  background: transparent;
-  border: 1px solid #555;
-  border-radius: 50px;
-  color: var(--text-light);
-  cursor: pointer;
-  padding: 8px 12px;
-  display: flex;
-  align-items: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px;
-}
-
-body.dark-mode #lang-button {
+body.dark-mode #theme-toggle, body.dark-mode .language-switcher button {
     color: var(--text-dark);
-    border-color: #777;
 }
 
-#lang-button img {
-  width: 20px;
-  margin-right: 8px;
+#theme-toggle:hover, .language-switcher button:hover {
+    background-color: rgba(0,0,0,0.1);
 }
 
+body.dark-mode #theme-toggle:hover, body.dark-mode .language-switcher button:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* --- LANGUAGE DROPDOWN --- */
+.language-switcher { position: relative; }
 #lang-dropdown {
-  display: none; /* Hidden by default */
+  display: none;
   position: absolute;
   top: 120%;
   right: 0;
@@ -185,30 +174,59 @@ body.dark-mode #lang-button {
   box-shadow: 0 4px 20px var(--shadow-light);
   overflow: hidden;
   z-index: 1100;
-  width: 150px;
+  width: 180px;
+}
+body.dark-mode #lang-dropdown { background-color: var(--card-bg-dark); }
+#lang-dropdown button { font-size: 1rem; padding: 12px 20px; width: 100%;}
+#lang-dropdown button:hover { background-color: var(--primary-red); color: white; }
+
+/* --- STATIC FOOTER --- */
+footer {
+  background-color: #000000;
+  color: #888;
+  text-align: center;
+  padding: 25px;
+  font-size: 0.9rem;
 }
 
-body.dark-mode #lang-dropdown {
-    background-color: var(--card-bg-dark);
+/* --- SONG PLAYER --- */
+#song-player-widget {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  background-color: var(--card-bg-light);
+  border-radius: 50px;
+  padding: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
 }
+body.dark-mode #song-player-widget { background-color: var(--card-bg-dark); }
 
-#lang-dropdown button {
-  background: none;
-  border: none;
-  color: var(--text-light);
-  display: block;
-  width: 100%;
-  padding: 12px 20px;
-  text-align: left;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-body.dark-mode #lang-dropdown button {
-    color: var(--text-dark);
-}
-
-#lang-dropdown button:hover {
+#song-toggle-button {
+  width: 50px;
+  height: 50px;
   background-color: var(--primary-red);
   color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
 }
+#song-toggle-button:hover { transform: scale(1.1); }
+
+#song-name-display {
+  padding: 0 25px 0 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-light);
+  white-space: nowrap;
+}
+body.dark-mode #song-name-display { color: var(--text-dark); }

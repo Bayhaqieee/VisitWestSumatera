@@ -1,182 +1,58 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
+<head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-    <title>Visit West Sumatera - Destinations</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>West Sumatera - Destinations</title>
     <link rel="stylesheet" href="places.css" />
     <link rel="stylesheet" href="shared.css" />
     <link rel="icon" href="images/icons/icon48.ico" />
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <div id="pagehome">
-        <a href="index.html">Minangkabau</a>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="destination.html" class="active" data-key="navDestinations">Destinations</a></li>
-          <li><a href="about.html" data-key="navAbout">About</a></li>
-        </ul>
-        <div class="language-switcher">
-            <button id="lang-button">
-                <img id="current-lang-icon" src="images/icons/id-flag.png" alt="Language">
-                <span id="current-lang-text">ID</span>
-            </button>
-            <div id="lang-dropdown">
-                <button id="set-lang-id">Bahasa Indonesia</button>
-                <button id="set-lang-en">English</button>
+        <div id="pagehome"><a href="index.html">Minangkabau</a></div>
+        <nav>
+            <ul>
+                <li><a href="destination.html" class="active" data-key="navDestinations">Destinations</a></li>
+                <li><a href="culinary.html" data-key="navCulinary">Culinary</a></li>
+                <li><a href="about.html" data-key="navAbout">About</a></li>
+            </ul>
+            <div class="language-switcher">
+                <button id="lang-button" aria-label="Change Language"><i id="current-lang-icon" class="fas fa-globe"></i></button>
+                <div id="lang-dropdown">
+                    <button id="set-lang-id">Bahasa Indonesia</button>
+                    <button id="set-lang-en">English</button>
+                </div>
             </div>
-        </div>
-        <button id="theme-toggle" aria-label="Toggle theme"></button>
-      </nav>
+            <button id="theme-toggle" aria-label="Toggle Theme"><i id="theme-icon" class="fas fa-moon"></i></button>
+        </nav>
     </header>
     <main>
-      <ul>
-        <li>
-          <img src="images/places/jamgadang.jpg" alt="Jam Gadang di Bukittinggi"/>
-          <div class="item">
-            <div>
-              <h2 data-key="jamGadangTitle">Jam Gadang</h2>
-              <p data-key="jamGadangDesc"></p>
-            </div>
-            <div class="actions">
-              <a href="..." target="_blank" data-key="exploreButton"></a>
-            </div>
-          </div>
-        </li>
-        <li>
-          <img src="images/places/Pagaruyung.jpg" alt="Istana Pagaruyung yang megah"/>
-          <div class="item">
-            <div>
-              <h2 data-key="pagaruyungTitle"></h2>
-              <p data-key="pagaruyungDesc"></p>
-            </div>
-            <div class="actions">
-              <a href="..." target="_blank" data-key="exploreButton"></a>
-            </div>
-          </div>
-        </li>
-        <li>
-          <img src="images/places/sianok.jpg" alt="Pemandangan Ngarai Sianok"/>
-          <div class="item">
-            <div>
-              <h2 data-key="sianokTitle"></h2>
-              <p data-key="sianokDesc"></p>
-            </div>
-            <div class="actions">
-              <a href="..." target="_blank" data-key="exploreButton"></a>
-            </div>
-          </div>
-        </li>
-        <li>
-          <img src="images/places/harau.jpg" alt="Lembah Harau dengan tebing granitnya"/>
-          <div class="item">
-            <div>
-              <h2 data-key="harauTitle"></h2>
-              <p data-key="harauDesc"></p>
-            </div>
-            <div class="actions">
-              <a href="..." target="_blank" data-key="exploreButton"></a>
-            </div>
-          </div>
-        </li>
-        <li>
-          <img src="images/places/maninjau.jpg" alt="Danau Maninjau dari ketinggian"/>
-          <div class="item">
-            <div>
-              <h2 data-key="maninjauTitle"></h2>
-              <p data-key="maninjauDesc"></p>
-            </div>
-            <div class="actions">
-              <a href="..." target="_blank" data-key="exploreButton"></a>
-            </div>
-          </div>
-        </li>
-        <li>
-          <img src="images/places/puncaklawang.jpg" alt="Paralayang di Puncak Lawang"/>
-          <div class="item">
-            <div>
-              <h2 data-key="lawangTitle"></h2>
-              <p data-key="lawangDesc"></p>
-            </div>
-            <div class="actions">
-              <a href="..." target="_blank" data-key="exploreButton"></a>
-            </div>
-          </div>
-        </li>
-        <li>
-          <img src="images/places/mentawai.jpg" alt="Peselancar di ombak Mentawai"/>
-          <div class="item">
-            <div>
-              <h2 data-key="mentawaiTitle"></h2>
-              <p data-key="mentawaiDesc"></p>
-            </div>
-            <div class="actions">
-              <a href="..." target="_blank" data-key="exploreButton"></a>
-            </div>
-          </div>
-        </li>
-        <li>
-          <img src="images/places/anai.jpg" alt="Air Terjun Lembah Anai"/>
-          <div class="item">
-            <div>
-              <h2 data-key="anaiTitle"></h2>
-              <p data-key="anaiDesc"></p>
-            </div>
-            <div class="actions">
-              <a href="..." target="_blank" data-key="exploreButton"></a>
-            </div>
-          </div>
-        </li>
-         <li>
-          <img src="images/places/carocok.jpg" alt="Jembatan di Pantai Carocok"/>
-          <div class="item">
-            <div>
-              <h2 data-key="carocokTitle"></h2>
-              <p data-key="carocokDesc"></p>
-            </div>
-            <div class="actions">
-              <a href="..." target="_blank" data-key="exploreButton"></a>
-            </div>
-          </div>
-        </li>
-         <li>
-          <img src="images/places/masjidraya.jpg" alt="Masjid Raya Sumatera Barat"/>
-          <div class="item">
-            <div>
-              <h2 data-key="masjidTitle"></h2>
-              <p data-key="masjidDesc"></p>
-            </div>
-            <div class="actions">
-              <a href="..." target="_blank" data-key="exploreButton"></a>
-            </div>
-          </div>
-        </li>
-         <li>
-          <img src="images/places/malinkundang.jpg" alt="Batu Malin Kundang"/>
-          <div class="item">
-            <div>
-              <h2 data-key="malinTitle"></h2>
-              <p data-key="malinDesc"></p>
-            </div>
-            <div class="actions">
-              <a href="..." target="_blank" data-key="exploreButton"></a>
-            </div>
-          </div>
-        </li>
-      </ul>
+        <ul>
+            <li><img src="images/places/jamgadang.jpg" alt="Jam Gadang"/><div class="item"><div><h2 data-key="jamGadangTitle"></h2><p data-key="jamGadangDesc"></p></div><div class="actions"><a href="https://indonesiakaya.com/pustaka-indonesia/jam-gadang-monumen-kebanggaan-kota-bukittinggi/" target="_blank" data-key="exploreButton"></a></div></div></li>
+            <li><img src="images/places/Pagaruyung.jpg" alt="Istana Pagaruyung"/><div class="item"><div><h2 data-key="pagaruyungTitle"></h2><p data-key="pagaruyungDesc"></p></div><div class="actions"><a href="https://indonesiakaya.com/pustaka-indonesia/istano-basa-pagaruyung-jejak-kejayaan-konfederasi-luhak-nan-tigo/" target="_blank" data-key="exploreButton"></a></div></div></li>
+            <li><img src="images/places/sianok.jpg" alt="Ngarai Sianok"/><div class="item"><div><h2 data-key="sianokTitle"></h2><p data-key="sianokDesc"></p></div><div class="actions"><a href="https://indonesiakaya.com/pustaka-indonesia/ngarai-sianok-lukisan-alam-dari-ranah-minang/" target="_blank" data-key="exploreButton"></a></div></div></li>
+            <li><img src="images/places/harau.jpg" alt="Lembah Harau"/><div class="item"><div><h2 data-key="harauTitle"></h2><p data-key="harauDesc"></p></div><div class="actions"><a href="https://minangtourism.com/lembah-harau/" target="_blank" data-key="exploreButton"></a></div></div></li>
+            <li><img src="images/places/maninjau.jpg" alt="Danau Maninjau"/><div class="item"><div><h2 data-key="maninjauTitle"></h2><p data-key="maninjauDesc"></p></div><div class="actions"><a href="https://rri.co.id/index.php/wisata/786182/sejarah-danau-maninjau-keindahan-alam-dan-legenda-minangkabau" target="_blank" data-key="exploreButton"></a></div></div></li>
+            <li><img src="images/places/puncaklawang.jpg" alt="Puncak Lawang"/><div class="item"><div><h2 data-key="lawangTitle"></h2><p data-key="lawangDesc"></p></div><div class="actions"><a href="https://minangtourism.com/puncak-lawang/" target="_blank" data-key="exploreButton"></a></div></div></li>
+            <li><img src="images/places/mentawai.jpg" alt="Kepulauan Mentawai"/><div class="item"><div><h2 data-key="mentawaiTitle"></h2><p data-key="mentawaiDesc"></p></div><div class="actions"><a href="https://www.djkn.kemenkeu.go.id/kpknl-padang/baca-artikel/12877/Yuk-Intip-Eksotisnya-Pesona-Pulau-Mentawai.html" target="_blank" data-key="exploreButton"></a></div></div></li>
+            <li><img src="images/places/anai.jpg" alt="Air Terjun Lembah Anai"/><div class="item"><div><h2 data-key="anaiTitle"></h2><p data-key="anaiDesc"></p></div><div class="actions"><a href="https://indonesiakaya.com/pustaka-indonesia/lembah-anai-anugerah-sang-maha-agung-di-jalur-padang-bukittinggi/" target="_blank" data-key="exploreButton"></a></div></div></li>
+            <li><img src="images/places/carocok.jpg" alt="Pantai Carocok"/><div class="item"><div><h2 data-key="carocokTitle"></h2><p data-key="carocokDesc"></p></div><div class="actions"><a href="https://www.nativeindonesia.com/pantai-carocok-painan/" target="_blank" data-key="exploreButton"></a></div></div></li>
+            <li><img src="images/places/masjidraya.jpg" alt="Masjid Raya Sumatera Barat"/><div class="item"><div><h2 data-key="masjidTitle"></h2><p data-key="masjidDesc"></p></div><div class="actions"><a href="https://www.andalastourism.com/masjid-raya-sumatera-barat" target="_blank" data-key="exploreButton"></a></div></div></li>
+            <li><img src="images/places/malinkundang.jpg" alt="Batu Malin Kundang"/><div class="item"><div><h2 data-key="malinTitle"></h2><p data-key="malinDesc"></p></div><div class="actions"><a href="https://en.wikipedia.org/wiki/Malin_Kundang" target="_blank" data-key="exploreButton"></a></div></div></li>
+        </ul>
     </main>
-    <footer>
-      <p data-key="footerText"></p>
-    </footer>
-    <audio id="background-song" src="lagu-daerah.mp3" loop></audio>
-    <button id="song-toggle-button" aria-label="Toggle Music">
-      <img id="song-icon" src="images/icons/music-off.png" alt="Play Music">
-    </button>
+    <footer><p data-key="footerText"></p></footer>
+    <div id="song-player-widget">
+        <button id="song-toggle-button" aria-label="Toggle Music"><i id="song-icon" class="fas fa-play"></i></button>
+        <div id="song-name-display"></div>
+    </div>
+    <audio id="background-song" src="lagu-daerah.mp3" loop data-song-name="Ayam Den Lapeh"></audio>
     <script src="translations.js"></script>
     <script src="app.js"></script>
-  </body>
+</body>
 </html>

@@ -11,6 +11,7 @@ main ul {
   flex-direction: column-reverse;
   align-items: center;
   gap: 50px;
+  list-style-type: none; /* FIX: Removes bullet points */
 }
 
 @media (min-width: 992px) {
@@ -89,6 +90,7 @@ body.dark-mode #profil {
     border-color: var(--card-bg-dark);
 }
 
+/* Updated Social Media Icon Styling */
 #social-links {
   text-align: center;
 }
@@ -96,14 +98,16 @@ body.dark-mode #profil {
 #social-links a {
     margin: 0 15px;
     display: inline-block;
-    transition: transform 0.2s ease;
+    font-size: 35px; /* Icon size */
+    color: var(--text-light);
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+body.dark-mode #social-links a {
+    color: var(--text-dark);
 }
 
 #social-links a:hover {
     transform: scale(1.2);
-}
-
-#social-links img {
-  width: 40px;
-  height: 40px;
+    color: var(--primary-red);
 }

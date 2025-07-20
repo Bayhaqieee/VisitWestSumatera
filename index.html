@@ -1,80 +1,68 @@
 <!DOCTYPE html>
-<html lang="id"> <head>
+<html lang="id">
+<head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Visit West Sumatera</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="shared.css" />
     <link rel="icon" href="images/icons/icon48.ico" />
-  </head>
-  <body>
+</head>
+<body class="homepage">
     <header>
-      <div id="pagehome">
-        <a href="index.html">Minangkabau</a>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="destination.html" data-key="navDestinations">Destinations</a></li>
-          <li><a href="about.html" data-key="navAbout">About</a></li>
-        </ul>
-        <div class="language-switcher">
-            <button id="lang-button">
-                <img id="current-lang-icon" src="images/icons/id-flag.png" alt="Language">
-                <span id="current-lang-text">ID</span>
-            </button>
-            <div id="lang-dropdown">
-                <button id="set-lang-id">Bahasa Indonesia</button>
-                <button id="set-lang-en">English</button>
+        <div id="pagehome"><a href="index.html">Minangkabau</a></div>
+        <nav>
+            <ul>
+                <li><a href="destination.html" data-key="navDestinations">Destinations</a></li>
+                <li><a href="culinary.html" data-key="navCulinary">Culinary</a></li>
+                <li><a href="about.html" data-key="navAbout">About</a></li>
+            </ul>
+            <div class="language-switcher">
+                <button id="lang-button" aria-label="Change Language"><i id="current-lang-icon" class="fas fa-globe"></i></button>
+                <div id="lang-dropdown">
+                    <button id="set-lang-id">Bahasa Indonesia</button>
+                    <button id="set-lang-en">English</button>
+                </div>
             </div>
-        </div>
-        <button id="theme-toggle" aria-label="Toggle theme"></button>
-      </nav>
+            <button id="theme-toggle" aria-label="Toggle Theme"><i id="theme-icon" class="fas fa-moon"></i></button>
+        </nav>
     </header>
     <main>
-      <section id="upper">
-        <div id="uppercontent">
-          <h1 data-key="homeTitle">Sumatera Barat</h1>
-          <p data-key="homeSubtitle">Negeri Penuh Pesona</p>
-          <a href="destination.html" data-key="homeButton">Temukan Tempat</a>
-        </div>
-      </section>
-      <section id="lower">
-        <h2 data-key="homeHighlightsTitle">Sorotan Utama</h2>
-        <ul id="destinate">
-          <li class="target">
-            <img src="images/places/jamgadang.jpg" alt="Jam Gadang on sunny day"/>
-            <div class="card-content">
-              <p data-key="jamGadangTitle">Jam Gadang</p>
-              <strong data-key="jamGadangLocation">Bukittinggi</strong>
+        <section id="upper">
+            <div id="uppercontent">
+                <h1 data-key="homeTitle"></h1><p data-key="homeSubtitle"></p><a href="destination.html" data-key="homeButton"></a>
             </div>
-          </li>
-          <li class="target">
-            <img src="images/places/sianok.jpg" alt="Sianok Canyon valley"/>
-            <div class="card-content">
-              <p data-key="sianokTitle">Ngarai Sianok</p>
-              <strong data-key="sianokLocation">Bukittinggi</strong>
+        </section>
+        <section id="lower">
+            <h2 data-key="homeHighlightsTitle"></h2>
+            <ul id="destinate">
+                <li class="target"><img src="images/places/jamgadang.jpg" alt="Jam Gadang"/><div class="card-content"><p data-key="jamGadangTitle"></p><strong data-key="jamGadangLocation"></strong></div></li>
+                <li class="target"><img src="images/places/sianok.jpg" alt="Sianok Canyon"/><div class="card-content"><p data-key="sianokTitle"></p><strong data-key="sianokLocation"></strong></div></li>
+                <li class="target"><img src="images/places/harau.jpg" alt="Harau Valley"/><div class="card-content"><p data-key="harauTitle"></p><strong data-key="harauLocation"></strong></div></li>
+            </ul>
+        </section>
+        <section class="info-section">
+            <div class="info-grid">
+                <article class="info-card"><h3 data-key="infoHistoryTitle"></h3><p data-key="infoHistoryDesc"></p></article>
+                <article class="info-card"><h3 data-key="infoGeographyTitle"></h3><p data-key="infoGeographyDesc"></p></article>
+                <article class="info-card"><h3 data-key="infoRegionsTitle"></h3><p data-key="infoRegionsDesc"></p></article>
+                <article class="info-card"><h3 data-key="infoDemographyTitle"></h3><p data-key="infoDemographyDesc"></p></article>
+                <article class="info-card"><h3 data-key="infoEconomyTitle"></h3><p data-key="infoEconomyDesc"></p></article>
+                <article class="info-card"><h3 data-key="infoCultureTitle"></h3><p data-key="infoCultureDesc"></p></article>
             </div>
-          </li>
-          <li class="target">
-            <img src="images/places/harau.jpg" alt="Harau Valley waterfalls"/>
-            <div class="card-content">
-              <p data-key="harauTitle">Lembah Harau</p>
-              <strong data-key="harauLocation">Payakumbuh</strong>
-            </div>
-          </li>
-        </ul>
-      </section>
+        </section>
     </main>
-    <footer>
-      <p data-key="footerText">© 2025 Desain Situs Web oleh Adit. Dibuat oleh Adit. Hak Cipta Dilindungi.</p>
-    </footer>
-    <audio id="background-song" src="lagu-daerah.mp3" loop></audio>
-    <button id="song-toggle-button" aria-label="Toggle Music">
-      <img id="song-icon" src="images/icons/music-off.png" alt="Play Music">
-    </button>
+    <footer><p data-key="footerText"></p></footer>
+    <div id="song-player-widget">
+        <button id="song-toggle-button" aria-label="Toggle Music"><i id="song-icon" class="fas fa-play"></i></button>
+        <div id="song-name-display"></div>
+    </div>
+    <audio id="background-song" src="lagu-daerah.mp3" loop data-song-name="Ayam Den Lapeh"></audio>
     <script src="translations.js"></script>
     <script src="app.js"></script>
-  </body>
+</body>
 </html>

@@ -1,81 +1,68 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
+<head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Visit West Sumatera - About</title>
     <link rel="stylesheet" href="about.css" />
     <link rel="stylesheet" href="shared.css" />
     <link rel="icon" href="images/icons/icon48.ico" />
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <div id="pagehome">
-        <a href="index.html">Minangkabau</a>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="destination.html" data-key="navDestinations"></a></li>
-          <li><a href="about.html" class="active" data-key="navAbout"></a></li>
-        </ul>
-        <div class="language-switcher">
-            <button id="lang-button">
-                <img id="current-lang-icon" src="images/icons/id-flag.png" alt="Language">
-                <span id="current-lang-text">ID</span>
-            </button>
-            <div id="lang-dropdown">
-                <button id="set-lang-id">Bahasa Indonesia</button>
-                <button id="set-lang-en">English</button>
+        <div id="pagehome"><a href="index.html">Minangkabau</a></div>
+        <nav>
+            <ul>
+                <li><a href="destination.html" data-key="navDestinations">Destinations</a></li>
+                <li><a href="culinary.html" data-key="navCulinary">Culinary</a></li>
+                <li><a href="about.html" class="active" data-key="navAbout">About</a></li>
+            </ul>
+            <div class="language-switcher">
+                <button id="lang-button" aria-label="Change Language"><i id="current-lang-icon" class="fas fa-globe"></i></button>
+                <div id="lang-dropdown">
+                    <button id="set-lang-id">Bahasa Indonesia</button>
+                    <button id="set-lang-en">English</button>
+                </div>
             </div>
-        </div>
-        <button id="theme-toggle" aria-label="Toggle theme"></button>
-      </nav>
+            <button id="theme-toggle" aria-label="Toggle Theme"><i id="theme-icon" class="fas fa-moon"></i></button>
+        </nav>
     </header>
     <main>
       <ul>
         <li>
             <div class="profile-card">
-              <h4 data-key="aboutMeTitle"></h4>
-              <p data-key="aboutMeDesc"></p>
+              <h4 data-key="aboutMeTitle"></h4><p data-key="aboutMeDesc"></p>
             </div>
         </li>
         <li id="profile-pic-container">
             <img id="profil" src="/Info_Page_Website/images/profile/about.png" alt="Picture of Aditya Bayhaqie" />
             <div id="social-links">
-               <a href="..." target="_blank"><img src="/Info_Page_Website/images/icons/facebookb.png" alt="Facebook"></a>
-               <a href="..." target="_blank"><img src="/Info_Page_Website/images/icons/instagramb.png" alt="Instagram"></a>
-               <a href="..." target="_blank"><img src="/Info_Page_Website/images/icons/linkedinb.png" alt="Linkedin"></a>
+               <a href="https://www.linkedin.com/in/bayhaqieee/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+               <a href="https://www.instagram.com/bayhaqieee/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+               <a href="https://github.com/bayhaqieee" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
             </div>
         </li>
         <li>
             <div class="profile-card details">
               <h4 data-key="detailsTitle"></h4>
-                <p>
-                  <strong data-key="nameLabel"></strong>
-                  Muhammad Aditya Bayhaqie
-                </p>
-                <p>
-                  <strong data-key="ageLabel"></strong>
-                  <span data-key="ageValue"></span>
-                </p>
-                <p>
-                  <strong data-key="locationLabel"></strong>
-                  Lt.5 No. 505 Rusunawa Lama Unsri, Unsri, Indralaya Indah, Indralaya, Ogan Ilir Regency, South Sumatra 30862
-                </p>
+                <p><strong data-key="nameLabel"></strong> Muhammad Aditya Bayhaqie</p>
+                <p><strong data-key="ageLabel"></strong> <span data-key="ageValue"></span></p>
+                <p><strong data-key="locationLabel"></strong> Lt.5 No. 505 Rusunawa Lama Unsri, Unsri, Indralaya Indah, Indralaya, Ogan Ilir Regency, South Sumatra 30862</p>
             </div>
         </li>
       </ul>
     </main>
-    <footer>
-      <p data-key="footerText"></p>
-    </footer>
-    <audio id="background-song" src="lagu-daerah.mp3" loop></audio>
-    <button id="song-toggle-button" aria-label="Toggle Music">
-      <img id="song-icon" src="images/icons/music-off.png" alt="Play Music">
-    </button>
+    <footer><p data-key="footerText"></p></footer>
+    <div id="song-player-widget">
+        <button id="song-toggle-button" aria-label="Toggle Music"><i id="song-icon" class="fas fa-play"></i></button>
+        <div id="song-name-display"></div>
+    </div>
+    <audio id="background-song" src="lagu-daerah.mp3" loop data-song-name="Ayam Den Lapeh"></audio>
     <script src="translations.js"></script>
     <script src="app.js"></script>
-  </body>
+</body>
 </html>
